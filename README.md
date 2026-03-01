@@ -107,8 +107,10 @@ Essayez de piéger l'IA ou de poser des questions complexes :
 - "متى يعتبر الطرد تعسفياً؟" (Quand le licenciement est-il abusif ?)
 - "ما هو السن القانوني للتشغيل؟" (Quel est l'âge légal de travail ?)
 
-##👤 Auteurs
+## 👤 Auteurs
 Projet réalisé dans le cadre académique (Master Intelligent Processing Systems / Deep Learning).
 **Par :**
 - ELBAKHOUCHI Wijdane
 - BENZRIOUAL Amine
+## 📜 Licence
+Projet académique — utilisation non libre. contacter moi
