@@ -1,26 +1,34 @@
-# ⚖️ Legal-RAG : Assistant Code du Travail Marocain
+# Code du Travail Marocain - Système RAG Multi-Agents
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
-![AI](https://img.shields.io/badge/AI-RAG-orange)
-![Local](https://img.shields.io/badge/Privacy-100%25_Local-green)
+<p align="left">
+  <img src="https://img.shields.io/badge/STATUT-PROJET%20ÉDUCATIF-0078D4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/DOMAINE-LEGAL%20TECH%20(MAROC)-7D2181?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/ARCHITECTURE-RAG%20MULTI--AGENTS-E87B1E?style=for-the-badge" />
+</p>
 
-**Legal-RAG** est une intelligence artificielle conversationnelle spécialisée dans le **Droit du Travail Marocain**. 
+<p align="left">
+  <img src="https://img.shields.io/badge/BASE%20VECTORIELLE-CHROMA%20DB-606060?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/ORCHESTRATION-LANGGRAPH%20|%20CREWAI-555555?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/INTERFACE-STREAMLIT-0078D4?style=for-the-badge" />
+</p>
 
-Contrairement aux LLMs génériques (ChatGPT, Gemini) qui peuvent "halluciner" des lois, ce système utilise une architecture **RAG (Retrieval-Augmented Generation)**. Il interroge une base de données vectorielle contenant le Code du Travail officiel pour fournir des réponses **sourcées, précises et juridiquement fiables** en Français et en Arabe.
+> **Un système de raisonnement juridique avancé utilisant des agents autonomes pour naviguer dans le Code du Travail marocain, fournissant des citations légales de haute précision et des conseils contextuels.**
 
----
-
-## 🚀 Fonctionnalités Clés
-
-* **🔍 Zéro Hallucination :** L'IA répond *uniquement* sur la base des articles de loi fournis. Si elle ne sait pas, elle le dit.
-* **🌍 Multilingue & RTL :** Support natif de l'Arabe (avec affichage de droite à gauche) et du Français.
-* **📚 Citations Exactes :** Chaque réponse mentionne l'article de référence (ex: *Source : Article 152*).
-* **✂️ Semantic Chunking :** Découpage intelligent du texte par "Article" (et non par page) pour préserver le sens juridique.
-* **🔒 100% Local :** Fonctionne entièrement sur votre machine avec **Ollama** et **ChromaDB**. Aucune donnée ne part dans le cloud.
+Contrairement aux LLMs génériques (tels que ChatGPT ou Gemini) qui peuvent « halluciner » des informations juridiques, ce système repose sur une architecture **RAG (Retrieval-Augmented Generation)**. Il interroge une base de données vectorielle contenant le Code du Travail officiel afin de garantir des réponses **sourcées, précises et juridiquement fiables**, aussi bien en français qu'en arabe.
 
 ---
 
-## 🛠️ Architecture Technique
+## Fonctionnalités Clés
+
+* **Zéro Hallucination :** L'IA répond *uniquement* sur la base des articles de loi fournis. Si elle ne sait pas, elle le dit.
+* **Multilingue & RTL :** Support natif de l'Arabe (avec affichage de droite à gauche) et du Français.
+* **Citations Exactes :** Chaque réponse mentionne l'article de référence (ex: *Source : Article 152*).
+* **Semantic Chunking :** Découpage intelligent du texte par "Article" (et non par page) pour préserver le sens juridique.
+* **100% Local :** Fonctionne entièrement sur votre machine avec **Ollama** et **ChromaDB**. Aucune donnée ne part dans le cloud.
+
+---
+
+## Architecture Technique
 
 Ce projet repose sur une stack Deep Learning moderne :
 
@@ -34,7 +42,7 @@ Ce projet repose sur une stack Deep Learning moderne :
 
 ---
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 ```text
 Legal_RAG/
@@ -46,7 +54,7 @@ Legal_RAG/
 ├── data_clean.json            # Données nettoyées (généré par ingest.py)
 └── chroma_db/                 # Base de données vectorielle (généré par vectorize.py)
 ```
-## 📦 Installation & Démarrage
+## Installation & Démarrage
 Suivez ces étapes pour lancer le projet sur votre machine.
 1. Prérequis
 
@@ -76,7 +84,7 @@ Assurez-vous qu'Ollama est lancé, puis téléchargez le modèle Mistral (optimi
 ```bash
 ollama pull mistral
 ```
-## ⚙️ Initialisation des Données (Pipeline)
+## Initialisation des Données (Pipeline)
 Avant de lancer l'application, vous devez traiter le PDF et créer la base de données.
 **Étape A : Nettoyage et Découpage** Ce script lit le PDF, nettoie les en-têtes et sépare les articles juridiques.
 ```bash
@@ -88,14 +96,14 @@ Résultat : Création du fichier data_clean.json.
 python vectorize.py
 ```
 Résultat : Création du dossier chroma_db/.
-## ▶️ Lancer l'Application
+## Lancer l'Application
 Une fois la base de données prête, lancez l'interface de chat :
 ```bash
 streamlit run app.py
 ```
 L'application s'ouvrira automatiquement dans votre navigateur (généralement http://localhost:8501).
 
-## 🧪 Exemples de Questions
+## Exemples de Questions
 
 Essayez de piéger l'IA ou de poser des questions complexes :
 ### En Français
@@ -107,10 +115,11 @@ Essayez de piéger l'IA ou de poser des questions complexes :
 - "متى يعتبر الطرد تعسفياً؟" (Quand le licenciement est-il abusif ?)
 - "ما هو السن القانوني للتشغيل؟" (Quel est l'âge légal de travail ?)
 
-## 👤 Auteurs
+## Auteurs
 Projet réalisé dans le cadre académique (Master Intelligent Processing Systems / Deep Learning).
+
 **Par :**
 - ELBAKHOUCHI Wijdane
 - BENZRIOUAL Amine
-## 📜 Licence
+## Licence
 Projet académique — utilisation non libre. contacter moi
